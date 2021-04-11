@@ -1,6 +1,5 @@
 const totalPoints = 400;
-const MOVE_SPEED = 0.25;
-// const MOVE_SPEED = 2;
+const MOVE_SPEED = 0.5;
 const POINT_RADIUS = 5;
 
 let SCREEN_WIDTH = 0;
