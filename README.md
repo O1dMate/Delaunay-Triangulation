@@ -1,5 +1,7 @@
 # Delaunay-Triangulation
-Delaunay Triangulation using the Bowyer-Watson algorithm built using JavaScript with p5.js
+Delaunay Triangulation using the Bowyer-Watson algorithm built using JavaScript with p5.js:
+
+![](demo-image.png)
 
 View a live demo [here](https://node-security.com/Delaunay-Triangulation/)
 
