@@ -1,11 +1,17 @@
 const totalPoints = 400;
-const MOVE_SPEED = 0.5;
 const POINT_RADIUS = 5;
+let MOVE_SPEED = 0.5;
 
 let SCREEN_WIDTH = 0;
 let SCREEN_HEIGHT = 0;
 
 let POINT_LIST = [];
+let displayMode;
+
+if (window.location.hash === '#1') {
+	displayMode = 1;
+	MOVE_SPEED = 1.5;
+}
 
 const drawRect = (x, y, w, h) => rect(x, SCREEN_HEIGHT-y, w, h);
 const drawLine = (x1, y1, x2, y2) => line(x1, SCREEN_HEIGHT-y1, x2, SCREEN_HEIGHT-y2);
@@ -24,7 +30,7 @@ function setup() {
 		POINT_LIST.push(new Point(SCREEN_WIDTH, SCREEN_HEIGHT, i));
 	}
 
-	frameRate(30);
+	frameRate(45);
 }
 
 function draw() {
@@ -43,7 +49,9 @@ function draw() {
 
 	// Draw the Points of top of Everything
 	POINT_LIST.forEach(currentPoint => {
-		drawPoint(currentPoint);
+		if (displayMode !== 1) {
+			drawPoint(currentPoint);
+		}
 		currentPoint.update();
 	});
 }
@@ -123,10 +131,20 @@ const superTriangle = () => {
 const drawTriangle = (triangleObject) => {
 	let vertices = Object.values(triangleObject.vertices);
 	let averageHeight = (vertices[0].position.y + vertices[1].position.y + vertices[2].position.y) / 3;
-	let outputColor = map(averageHeight, -200, SCREEN_HEIGHT+200, -20, 340);
+	let outputColor;
+	
+	if (displayMode === 1) {
+		// Yellow and Black
+		outputColor = map(averageHeight, -200, SCREEN_HEIGHT+200, 0, 100);
+		colorMode(HSB, 360, 100, 100);
+		fill(56.7, 100, outputColor);
+	} else {
+		// Full Spectrum
+		outputColor = map(averageHeight, -200, SCREEN_HEIGHT + 200, -20, 340);
+		colorMode(HSB, 360, 100, 100);
+		fill(outputColor, 100, 100);
+	}
 
-	colorMode(HSB, 360, 100, 100);
-	fill(outputColor, 100, 100);
 	colorMode(RGB, 255);
 	stroke(180, 180, 180);
 	drawTri(vertices[0].position.x, vertices[0].position.y, vertices[1].position.x, vertices[1].position.y, vertices[2].position.x, vertices[2].position.y);
