@@ -1,14 +1,13 @@
 # Delaunay-Triangulation
-Delaunay Triangulation using the Bowyer-Watson algorithm built using JavaScript with p5.js:
-
-**NOTE** The animation does NOT auto resize. If you change browser size, please refresh the page.
+Delaunay-Triangulation using the Bowyer-Watson algorithm built using JavaScript with p5.js:
 
 ![](demo-image.png)
 
-View a live demos:  
-[Demo 1](https://node-security.com/Delaunay-Triangulation/)  
-[Demo 2](https://node-security.com/Delaunay-Triangulation/#1)  
+View live demos:  
+ - [Demo 1](https://node-security.com/Delaunay-Triangulation/)  
+ - [Demo 2](https://node-security.com/Delaunay-Triangulation/#1)  
 
+**NOTE** The animation does not auto resize. If you change browser size, please refresh the page.
 
 ## Credit 
 
