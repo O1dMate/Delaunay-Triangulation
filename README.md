@@ -4,8 +4,8 @@ Delaunay-Triangulation using the Bowyer-Watson algorithm built using JavaScript 
 ![](demo-image.png)
 
 View live demos:  
- - [Demo 1](https://node-security.com/Delaunay-Triangulation/)  
- - [Demo 2](https://node-security.com/Delaunay-Triangulation/#1)  
+ - [Demo 1](https://o1dmate.github.io/Delaunay-Triangulation/)  
+ - [Demo 2](https://o1dmate.github.io/Delaunay-Triangulation/#1)  
 
 **NOTE** The animation does not auto resize. If you change browser size, please refresh the page.
 
